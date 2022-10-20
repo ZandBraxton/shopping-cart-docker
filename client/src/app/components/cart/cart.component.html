@@ -1,0 +1,11 @@
+<div class="cart-container">
+  <app-cart-item
+    *ngFor="let item of cart.items"
+    [item]="item"
+    (updateCart)="getCart()"
+  ></app-cart-item>
+  <div class="checkout-container">
+    <div class="total">Estimated Total: ${{ this.cart.subTotal }}</div>
+    <button class="checkout" (click)="checkoutCart()">Checkout</button>
+  </div>
+</div>

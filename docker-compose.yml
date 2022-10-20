@@ -1,0 +1,31 @@
+version: "3"
+services:
+  frontend:
+    build: ./client
+    container_name: client
+    ports:
+      - "4200:4200"
+    links:
+      - backend
+
+  backend:
+    build: ./server
+    container_name: server
+    env_file:
+      - ./server/.env
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/data
+    ports:
+      - "3000:3000"
+    links:
+      - mongo
+
+  mongo:
+    container_name: mongo
+    image: mongo
+    volumes:
+      - ./data:/data/db
+    ports:
+      - "27017:27017"
+volumes:
+  app-data:

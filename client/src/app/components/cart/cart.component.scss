@@ -1,0 +1,32 @@
+.cart-container {
+  height: auto;
+  width: 50%;
+  margin: 30px auto;
+  //   border: 1px solid rgb(215, 215, 216);
+}
+
+.checkout-container {
+  display: flex;
+  gap: 30px;
+
+  .checkout {
+    background-color: rgb(220, 41, 30);
+    color: white;
+    font-weight: 800;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 8px;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: rgb(194, 35, 26);
+      transition: 0.3s;
+      cursor: pointer;
+    }
+  }
+}
+
+.total {
+  font-size: 1.4rem;
+  margin-left: 2rem;
+}

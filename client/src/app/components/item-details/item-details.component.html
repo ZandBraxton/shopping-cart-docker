@@ -1,0 +1,23 @@
+<div>
+  <div class="item-container">
+    <img
+      class="item-img"
+      src="{{ this.product.image }}"
+      alt="{{ this.product.name }}"
+    />
+    <div class="item-info">
+      <h2 class="item-name">{{ this.product.name }}</h2>
+      <p class="item-price">${{ this.product.price }}</p>
+      <div class="item-quantity-container">
+        <div class="item-quantity-adjustment" (click)="decrementQuantity()">
+          <mat-icon>remove</mat-icon>
+        </div>
+        <h1 type="number" class="item-quantity">{{ this.quantity }}</h1>
+        <div class="item-quantity-adjustment" (click)="incrementQuantity()">
+          <mat-icon>add</mat-icon>
+        </div>
+      </div>
+      <button class="add-to-cart" (click)="addToCart()">Add to cart</button>
+    </div>
+  </div>
+</div>

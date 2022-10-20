@@ -1,0 +1,17 @@
+<div class="cart-item-container">
+  <mat-icon (click)="deleteFromCart()">close</mat-icon>
+  <img class="cart-img" src="{{ item.image }}" alt="{{ item.name }}" />
+  <div class="cart-item-info">
+    <span class="cart-name"> {{ item.name }} </span>
+    <div class="qty-handle">
+      <div class="item-quantity-adjustment" (click)="decrementQuantity()">
+        <mat-icon>{{ item.quantity === 1 ? "delete" : "remove" }}</mat-icon>
+      </div>
+      <span>Qty: {{ item.quantity }}</span>
+      <div class="item-quantity-adjustment" (click)="incrementQuantity()">
+        <mat-icon>add</mat-icon>
+      </div>
+    </div>
+    <span class="total">${{ item.total }}</span>
+  </div>
+</div>

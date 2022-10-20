@@ -1,0 +1,17 @@
+<div class="col shop-item">
+  <div class="card">
+    <a
+      routerLink="{{ this.product.productId }}"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+    >
+      <img src="{{ this.product.image }}" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">{{ this.product.name }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">${{ this.product.price }}</h6>
+      </div>
+    </a>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

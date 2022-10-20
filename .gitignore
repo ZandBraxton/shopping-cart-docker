@@ -1,0 +1,8 @@
+/client/node_modules
+/client/dist
+/client/out-tsc
+/client/angular
+
+/server/node_modules
+
+/data
